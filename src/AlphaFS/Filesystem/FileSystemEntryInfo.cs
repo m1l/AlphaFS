@@ -36,6 +36,7 @@ namespace Alphaleonis.Win32.Filesystem
 
       private string _fullPath;
       private string _longFullPath;
+      private readonly bool _hasValidAttributes;
 
       #endregion // Fields
 
@@ -47,6 +48,7 @@ namespace Alphaleonis.Win32.Filesystem
       internal FileSystemEntryInfo(NativeMethods.WIN32_FIND_DATA findData)
       {
          Win32FindData = findData;
+         _hasValidAttributes = File.HasValidAttributes(findData.dwFileAttributes);
       }
 
       #endregion // Constructor
@@ -112,52 +114,34 @@ namespace Alphaleonis.Win32.Filesystem
 
          set
          {
-            LongFullPath = value;
-            _fullPath = Path.GetRegularPathCore(LongFullPath, GetFullPathOptions.None, false);
+            _longFullPath = Path.GetLongPathCore(value, GetFullPathOptions.None);
+            _fullPath = Path.GetRegularPathCore(_longFullPath, GetFullPathOptions.None, false);
          }
       }
 
 
       /// <summary>The instance is a candidate for backup or removal. </summary>
-      public bool IsArchive
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Archive) != 0; }
-      }
+      public bool IsArchive => _hasValidAttributes && (Attributes & FileAttributes.Archive) != 0;
 
 
       /// <summary>The instance is compressed.</summary>
-      public bool IsCompressed
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Compressed) != 0; }
-      }
+      public bool IsCompressed => _hasValidAttributes && (Attributes & FileAttributes.Compressed) != 0;
 
 
       /// <summary>Reserved for future use.</summary>
-      public bool IsDevice
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Device) != 0; }
-      }
+      public bool IsDevice => _hasValidAttributes && (Attributes & FileAttributes.Device) != 0;
 
 
       /// <summary>The instance is a directory.</summary>
-      public bool IsDirectory
-      {
-         get { return File.IsDirectory(Attributes); }
-      }
+      public bool IsDirectory => _hasValidAttributes && (Attributes & FileAttributes.Directory) != 0;
 
 
       /// <summary>The instance is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.</summary>
-      public bool IsEncrypted
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Encrypted) != 0; }
-      }
+      public bool IsEncrypted => _hasValidAttributes && (Attributes & FileAttributes.Encrypted) != 0;
 
 
       /// <summary>The instance is hidden, and thus is not included in an ordinary directory listing.</summary>
-      public bool IsHidden
-      {
-         get { return File.IsHidden(Attributes); }
-      }
+      public bool IsHidden => _hasValidAttributes && (Attributes & FileAttributes.Hidden) != 0;
 
 
       /// <summary>The instance is a mount point. Applicable to local directories and local volumes.</summary>
@@ -168,45 +152,27 @@ namespace Alphaleonis.Win32.Filesystem
 
 
       /// <summary>The instance is a standard file that has no special attributes. This attribute is valid only if it is used alone.</summary>
-      public bool IsNormal
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Normal) != 0; }
-      }
+      public bool IsNormal => _hasValidAttributes && (Attributes & FileAttributes.Normal) != 0;
 
 
       /// <summary>The instance will not be indexed by the operating system's content indexing service.</summary>
-      public bool IsNotContentIndexed
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.NotContentIndexed) != 0; }
-      }
+      public bool IsNotContentIndexed => _hasValidAttributes && (Attributes & FileAttributes.NotContentIndexed) != 0;
 
 
       /// <summary>The instance is offline. The data of the file is not immediately available.</summary>
-      public bool IsOffline
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Offline) != 0; }
-      }
+      public bool IsOffline => _hasValidAttributes && (Attributes & FileAttributes.Offline) != 0;
 
 
       /// <summary>The instance is read-only.</summary>
-      public bool IsReadOnly
-      {
-         get { return File.IsReadOnly(Attributes); }
-      }
+      public bool IsReadOnly => _hasValidAttributes && (Attributes & FileAttributes.ReadOnly) != 0;
 
 
       /// <summary>The instance contains a reparse point, which is a block of user-defined data associated with a file or a directory.</summary>
-      public bool IsReparsePoint
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.ReparsePoint) != 0; }
-      }
+      public bool IsReparsePoint => _hasValidAttributes && (Attributes & FileAttributes.ReparsePoint) != 0;
 
 
       /// <summary>The instance is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.</summary>
-      public bool IsSparseFile
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.SparseFile) != 0; }
-      }
+      public bool IsSparseFile => _hasValidAttributes && (Attributes & FileAttributes.SparseFile) != 0;
 
 
       /// <summary>The instance is a symbolic link.</summary>
@@ -217,19 +183,13 @@ namespace Alphaleonis.Win32.Filesystem
 
 
       /// <summary>The instance is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.</summary>
-      public bool IsSystem
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.System) != 0; }
-      }
+      public bool IsSystem => _hasValidAttributes && (Attributes & FileAttributes.System) != 0;
 
 
       /// <summary>The instance is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished.
       /// File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage.
       /// A temporary file should be deleted by the application as soon as it is no longer needed.</summary>
-      public bool IsTemporary
-      {
-         get { return File.HasValidAttributes(Attributes) && (Attributes & FileAttributes.Temporary) != 0; }
-      }
+      public bool IsTemporary => _hasValidAttributes && (Attributes & FileAttributes.Temporary) != 0;
 
 
       /// <summary>The instance time this entry was last accessed.</summary>
