@@ -6,8 +6,8 @@
    - ✅ 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md), [Progress](tasks/02.01-project-targeting/progress-details.md))
    - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
    - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
-   - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
-   - 🔲 02.01-project-targeting: Add net10.0 targeting and align project references
+   - ✅ 02.02-library-api-compatibility: Fix AlphaFS code incompatibilities for the new target ([Content](tasks/02.02-library-api-compatibility/task.md), [Progress](tasks/02.02-library-api-compatibility/progress-details.md))
+   - 🔄 02.02-library-api-compatibility: Fix AlphaFS code incompatibilities for the new target ([Content](tasks/02.02-library-api-compatibility/task.md))
    - 🔲 02.02-library-api-compatibility: Fix AlphaFS code incompatibilities for the new target
    - 🔲 02.03-library-validation: Build and validate the upgraded AlphaFS library and dependents
 - 🔲 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10 ([Content](tasks/03-alphafs-tests/task.md))
