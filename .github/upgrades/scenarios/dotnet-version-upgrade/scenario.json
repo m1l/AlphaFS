@@ -3,14 +3,16 @@
   "operationId": "f60685e3-01ba-461e-a516-85ddcf8f431a",
   "description": "Upgrade .NET projects to newer .NET versions",
   "startTime": "2026-05-20T18:16:15.6329103Z",
-  "lastUpdateTime": "2026-05-20T19:06:10.5610878Z",
+  "lastUpdateTime": "2026-05-20T19:12:27.5259662Z",
   "properties": {
     "taskStates": {
       "01-prerequisites": "Completed",
       "02-alphafs-library": "InProgress",
       "02.01-project-targeting": "Completed",
       "02.02-library-api-compatibility": "Completed",
-      "02.03-library-validation": "Completed"
+      "02.03-library-validation": "Completed",
+      "03-alphafs-tests": "InProgress",
+      "03.01-test-project-retargeting": "Completed"
     },
     "UpgradeTargetFramework": "net10.0"
   },

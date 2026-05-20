@@ -18,3 +18,8 @@ Verified that the AlphaFS library compatibility work was already completed as pa
 
 Validated the upgraded AlphaFS library tier with full MSBuild checks. The library built successfully across all configured target frameworks, and the dependent AlphaFS unit test project also built successfully against the upgraded library, confirming the bottom-up dependency tier is stable.
 
+
+## [2026-05-20 15:12] 03.01-test-project-retargeting
+
+Retargeted the AlphaFS unit test project to net10.0-windows and updated MSTest.TestAdapter and MSTest.TestFramework to version 4.2.3. The first validation build confirmed the project-file migration is in place and surfaced the expected test-source compatibility fixes needed in the next subtasks.
+
