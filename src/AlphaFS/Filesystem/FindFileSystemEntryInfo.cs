@@ -301,7 +301,9 @@ namespace Alphaleonis.Win32.Filesystem
 
       private FileSystemEntryInfo NewFilesystemEntry(string pathLp, string fileName, NativeMethods.WIN32_FIND_DATA win32FindData)
       {
-         var fullPath = (IsRelativePath ? pathLp.Replace(RelativeAbsolutePrefix, string.Empty) : pathLp) + fileName;
+         var fullPath = (IsRelativePath
+         ? pathLp.Substring(RelativeAbsolutePrefix.Length)
+         : pathLp) + fileName;
 
          return new FileSystemEntryInfo(win32FindData) {FullPath = fullPath};
       }
