@@ -9,8 +9,8 @@
    - 🔄 03.03-test-acl-and-execution-validation: Fix remaining ACL-focused tests and validate the upgraded test project ([Content](tasks/03.03-test-acl-and-execution-validation/task.md))
    - ✅ 02.03-library-validation: Build and validate the upgraded AlphaFS library and dependents ([Content](tasks/02.03-library-validation/task.md), [Progress](tasks/02.03-library-validation/progress-details.md))
 - ✅ 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10 ([Content](tasks/03-alphafs-tests/task.md), [Progress](tasks/03-alphafs-tests/progress-details.md))
-- 🔄 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10 ([Content](tasks/03-alphafs-tests/task.md))
-- 🔲 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10 ([Content](tasks/03-alphafs-tests/task.md))
+- ✅ 04-final-validation: Run final solution validation and document remaining follow-up ([Content](tasks/04-final-validation/task.md), [Progress](tasks/04-final-validation/progress-details.md))
+- 🔄 04-final-validation: Run final solution validation and document remaining follow-up ([Content](tasks/04-final-validation/task.md))
 - 🔲 04-final-validation: Run final solution validation and document remaining follow-up ([Content](tasks/04-final-validation/task.md))
 
 **Legend**: ✅ Complete | 🔄 In Progress | 🔲 Pending | ⚠️ Blocked | ❌ Failed

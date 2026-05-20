@@ -38,3 +38,8 @@ Completed the remaining ACL-focused validation for the upgraded AlphaFS test pro
 
 Completed the AlphaFS unit test project upgrade to net10.0-windows. This included retargeting the test project and MSTest packages, modernizing shared test helpers and assertion patterns, updating ACL-related System.IO calls for the modern target, and validating the result with a successful build and test run.
 
+
+## [2026-05-20 15:58] 04-final-validation
+
+Completed final validation for the .NET upgrade. The full solution built successfully with Visual Studio MSBuild, and the upgraded AlphaFS unit test project executed successfully on net10.0-windows. The remaining note is that the modern target is intentionally Windows-specific because the library still depends on Windows ACL and filesystem behavior.
+

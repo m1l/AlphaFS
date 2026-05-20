@@ -3,7 +3,7 @@
   "operationId": "f60685e3-01ba-461e-a516-85ddcf8f431a",
   "description": "Upgrade .NET projects to newer .NET versions",
   "startTime": "2026-05-20T18:16:15.6329103Z",
-  "lastUpdateTime": "2026-05-20T19:43:46.4302485Z",
+  "lastUpdateTime": "2026-05-20T19:58:06.0674931Z",
   "properties": {
     "taskStates": {
       "01-prerequisites": "Completed",
@@ -14,7 +14,8 @@
       "03-alphafs-tests": "Completed",
       "03.01-test-project-retargeting": "Completed",
       "03.02-test-utility-and-path-fixes": "Completed",
-      "03.03-test-acl-and-execution-validation": "Completed"
+      "03.03-test-acl-and-execution-validation": "Completed",
+      "04-final-validation": "Completed"
     },
     "UpgradeTargetFramework": "net10.0"
   },
