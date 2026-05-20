@@ -49,11 +49,13 @@ namespace AlphaFS.UnitTest
          foreach (var file in System.IO.Directory.EnumerateFiles(inputPath))
          {
             var shell32Info = Alphaleonis.Win32.Filesystem.Shell32.GetShell32Info(file);
+            var association = shell32Info.Association;
 
             // Not much of a test...
             Assert.IsNotNull(shell32Info);
-
-            UnitTestConstants.Dump(shell32Info);
+            Assert.IsNotNull(association);
+            Assert.IsFalse(string.IsNullOrWhiteSpace(shell32Info.FullPath));
+            Console.WriteLine("Shell32Info created for: [{0}] -> Association: [{1}]", shell32Info.FullPath, association);
 
             if (++cnt == 5)
                break;

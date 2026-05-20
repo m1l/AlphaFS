@@ -55,7 +55,10 @@ namespace Alphaleonis.Win32.Filesystem
          // Shell32 is limited to <c>MAX_PATH</c> length.
          // Get a full path of regular format.
 
-         FullPath = Path.GetExtendedLengthPathCore(null, fileName, pathFormat, GetFullPathOptions.RemoveTrailingDirectorySeparator | GetFullPathOptions.FullCheck);
+         FullPath = Path.GetRegularPathCore(
+            Path.GetExtendedLengthPathCore(null, fileName, pathFormat, GetFullPathOptions.RemoveTrailingDirectorySeparator | GetFullPathOptions.FullCheck),
+            GetFullPathOptions.None,
+            false);
 
          Initialize();
       }
@@ -85,34 +88,35 @@ namespace Alphaleonis.Win32.Filesystem
       [SecurityCritical]
       public string GetVerbCommand(string shellVerb)
       {
-         return GetString(_iQaNone, Shell32.AssociationString.Command, shellVerb);
+         return GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.Command, shellVerb);
       }
 
 
       [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
       [SecurityCritical]
-      private static string GetString(NativeMethods.IQueryAssociations iQa, Shell32.AssociationString assocString, string shellVerb)
+      private string GetString(Shell32.AssociationAttributes attributes, Shell32.AssociationString assocString, string shellVerb)
       {
-         // GetString() throws Exceptions.
          try
          {
-            // Use a large buffer to prevent calling this function twice.
-            var size = NativeMethods.DefaultFileBufferSize;
-            var buffer = new StringBuilder(size);
+            attributes |= Shell32.AssociationAttributes.NoTruncate | Shell32.AssociationAttributes.RemapRunDll;
 
-            iQa.GetString(Shell32.AssociationAttributes.NoTruncate | Shell32.AssociationAttributes.RemapRunDll, assocString, shellVerb, buffer, out size);
+            uint bufferSize = NativeMethods.MaxPath;
+            StringBuilder buffer;
+            uint retVal;
 
-            return buffer.ToString();
+            do
+            {
+               buffer = new StringBuilder((int)bufferSize);
+               retVal = NativeMethods.AssocQueryString(attributes, assocString, FullPath, shellVerb, buffer, out bufferSize);
+            } while (retVal == Win32Errors.E_POINTER);
+
+            return retVal == Win32Errors.S_OK ? buffer.ToString() : string.Empty;
          }
          catch
          {
             return string.Empty;
          }
       }
-
-
-      private NativeMethods.IQueryAssociations _iQaNone;    // Retrieve info from Shell.
-      private NativeMethods.IQueryAssociations _iQaByExe;   // Retrieve info from exe file.
 
       [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
       [SecurityCritical]
@@ -121,25 +125,7 @@ namespace Alphaleonis.Win32.Filesystem
          if (Initialized)
             return;
 
-         var iidIQueryAssociations = new Guid(NativeMethods.QueryAssociationsGuid);
-
-         if (NativeMethods.AssocCreate(NativeMethods.ClsidQueryAssociations, ref iidIQueryAssociations, out _iQaNone) == Win32Errors.S_OK)
-         {
-            try
-            {
-               _iQaNone.Init(Shell32.AssociationAttributes.None, FullPath, IntPtr.Zero, IntPtr.Zero);
-
-               if (NativeMethods.AssocCreate(NativeMethods.ClsidQueryAssociations, ref iidIQueryAssociations, out _iQaByExe) == Win32Errors.S_OK)
-               {
-                  _iQaByExe.Init(Shell32.AssociationAttributes.InitByExeName, FullPath, IntPtr.Zero, IntPtr.Zero);
-
-                  Initialized = true;
-               }
-            }
-            catch
-            {
-            }
-         }
+         Initialized = true;
       }
 
 
@@ -174,7 +160,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_association == null)
-               _association = GetString(_iQaNone, Shell32.AssociationString.Executable, null);
+               _association = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.Executable, null);
 
             return _association;
          }
@@ -211,7 +197,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_command == null)
-               _command = GetString(_iQaNone, Shell32.AssociationString.Command, null);
+               _command = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.Command, null);
 
             return _command;
          }
@@ -228,7 +214,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_contentType == null)
-               _contentType = GetString(_iQaNone, Shell32.AssociationString.ContentType, null);
+               _contentType = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.ContentType, null);
 
             return _contentType;
          }
@@ -246,7 +232,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_ddeApplication == null)
-               _ddeApplication = GetString(_iQaNone, Shell32.AssociationString.DdeApplication, null);
+               _ddeApplication = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.DdeApplication, null);
 
             return _ddeApplication;
          }
@@ -263,7 +249,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_defaultIcon == null)
-               _defaultIcon = GetString(_iQaNone, Shell32.AssociationString.DefaultIcon, null);
+               _defaultIcon = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.DefaultIcon, null);
 
             return _defaultIcon;
          }
@@ -284,7 +270,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_friendlyAppName == null)
-               _friendlyAppName = GetString(_iQaByExe, Shell32.AssociationString.FriendlyAppName, null);
+               _friendlyAppName = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.FriendlyAppName, null);
 
             return _friendlyAppName;
          }
@@ -301,7 +287,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_friendlyDocName == null)
-               _friendlyDocName = GetString(_iQaNone, Shell32.AssociationString.FriendlyDocName, null);
+               _friendlyDocName = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.FriendlyDocName, null);
 
             return _friendlyDocName;
          }
@@ -322,7 +308,7 @@ namespace Alphaleonis.Win32.Filesystem
          get
          {
             if (_openWithAppName == null)
-               _openWithAppName = GetString(_iQaNone, Shell32.AssociationString.FriendlyAppName, null);
+               _openWithAppName = GetString(Shell32.AssociationAttributes.None, Shell32.AssociationString.FriendlyAppName, null);
 
             return _openWithAppName;
          }

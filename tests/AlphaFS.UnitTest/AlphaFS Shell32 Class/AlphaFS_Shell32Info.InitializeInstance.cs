@@ -46,8 +46,8 @@ namespace AlphaFS.UnitTest
             var shell32Info = new Alphaleonis.Win32.Filesystem.Shell32Info(file);
             
             Assert.IsTrue(null != shell32Info);
-
-            UnitTestConstants.Dump(shell32Info);
+            Assert.IsFalse(string.IsNullOrWhiteSpace(shell32Info.FullPath));
+            Console.WriteLine("Shell32Info initialized for: [{0}]", shell32Info.FullPath);
          }
 
          Console.WriteLine();
