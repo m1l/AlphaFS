@@ -20,7 +20,9 @@
  */
 
 using System;
+#if !NET10_0
 using System.Runtime.Serialization;
+#endif
 
 namespace Alphaleonis.Win32.Filesystem
 {
@@ -49,11 +51,13 @@ namespace Alphaleonis.Win32.Filesystem
       }
 
 
+#if !NET10_0
       /// <summary>[AlphaFS] Initializes a new instance of the <see cref="TransactionAlreadyCommittedException"/> class.</summary>
       /// <param name="info">The object that holds the serialized object data.</param>
       /// <param name="context">The contextual information about the source or destination.</param>
       protected TransactionAlreadyCommittedException(SerializationInfo info, StreamingContext context) : base(info, context)
       {
       }
+#endif
    }
 }

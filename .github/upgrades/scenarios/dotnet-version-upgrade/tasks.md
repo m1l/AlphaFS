@@ -1,14 +1,16 @@
-# .NET Version Upgrade Progress
+**Progress**: 0/5 tasks complete <progress value="0" max="100"></progress> 0%
+**Progress**: 1/6 tasks complete <progress value="17" max="100"></progress> 17%
+**Progress**: 1/6 tasks complete <progress value="17" max="100"></progress> 17%
+**Status**: In Progress - Task 02-alphafs-library
 
-## Overview
+   - ✅ 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md), [Progress](tasks/02.01-project-targeting/progress-details.md))
+   - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
+   - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
+   - 🔄 02.01-project-targeting: Add net10.0 targeting and align project references ([Content](tasks/02.01-project-targeting/task.md))
+   - 🔲 02.01-project-targeting: Add net10.0 targeting and align project references
+   - 🔲 02.02-library-api-compatibility: Fix AlphaFS code incompatibilities for the new target
+   - 🔲 02.03-library-validation: Build and validate the upgraded AlphaFS library and dependents
+- 🔲 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10 ([Content](tasks/03-alphafs-tests/task.md))
+- 🔲 04-final-validation: Run final solution validation and document remaining follow-up ([Content](tasks/04-final-validation/task.md))
 
-**Progress**: 1/4 tasks complete <progress value="25" max="100"></progress> 25%
-**Progress**: 0/4 tasks complete <progress value="0" max="100"></progress> 0%
-**Progress**: 0/4 tasks complete <progress value="0" max="100"></progress> 0%
-
-- ✅ 01-prerequisites: Verify SDK and repository prerequisites ([Content](tasks/01-prerequisites/task.md), [Progress](tasks/01-prerequisites/progress-details.md))
-- 🔄 01-prerequisites: Verify SDK and repository prerequisites ([Content](tasks/01-prerequisites/task.md))
-- 🔲 01-prerequisites: Verify SDK and repository prerequisites
-- 🔲 02-alphafs-library: Upgrade the AlphaFS library for multi-targeted .NET 10 support
-- 🔲 03-alphafs-tests: Upgrade the AlphaFS unit tests to .NET 10
-- 🔲 04-final-validation: Run final solution validation and document remaining follow-up
+**Legend**: ✅ Complete | 🔄 In Progress | 🔲 Pending | ⚠️ Blocked | ❌ Failed

@@ -151,7 +151,9 @@ namespace Alphaleonis.Win32.Filesystem
       #region IDisposable Members
 
       /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+#if !NET10_0
       [SecurityPermissionAttribute(SecurityAction.Demand, UnmanagedCode = true)]
+#endif
       public void Dispose()
       {
          _hTrans.Close();

@@ -185,7 +185,7 @@ namespace Alphaleonis.Win32.Filesystem
 
                if (retry)
                {
-                  if (null != errorFilter && null != cma.DirectoryEnumerationFilters.CancellationToken)
+                  if (null != errorFilter)
                   {
                      if (cma.DirectoryEnumerationFilters.CancellationToken.WaitHandle.WaitOne(retryTimeout * 1000))
                      {

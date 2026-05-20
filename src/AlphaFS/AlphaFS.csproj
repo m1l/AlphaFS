@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <Import Project="..\..\build\common.props" />
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;net47;netstandard20</TargetFrameworks>
+    <TargetFrameworks>net10.0-windows;netstandard20;net47;net46;net45</TargetFrameworks>
     <IsPackable>true</IsPackable>
     <PackageId>AlphaFS</PackageId>
     <Title>AlphaFS</Title>
@@ -718,11 +718,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard20'">
-    <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />
-    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net10.0-windows'">
+    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard20'">
     <PackageReference Include="System.Security.Permissions" Version="4.5.0" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'!='netstandard20'">
+  <ItemGroup Condition="'$(TargetFramework)'=='net47' Or '$(TargetFramework)'=='net46' Or '$(TargetFramework)'=='net45'">
     <Reference Include="System.Transactions" />
   </ItemGroup>
 </Project>

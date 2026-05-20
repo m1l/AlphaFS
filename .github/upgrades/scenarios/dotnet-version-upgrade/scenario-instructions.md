@@ -33,6 +33,9 @@
 - Validate each tier with builds and affected tests before moving to the next tier
 - Run full solution validation after all tier work is complete
 
+## Build Tool Decisions
+- **AlphaFS.csproj**: msbuild.exe (multi-targets .NET Framework TFMs and includes a .resx resource)
+
 ## User Preferences
 ### Technical Preferences
 - Do not create a new branch; continue on the current branch instead.

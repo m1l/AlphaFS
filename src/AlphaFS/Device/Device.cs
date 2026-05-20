@@ -291,35 +291,52 @@ namespace Alphaleonis.Win32.Filesystem
       {
          var inputSize = (uint) Marshal.SizeOf(input);
          var outputLength = increment;
+         var inputHandle = GCHandle.Alloc(input, GCHandleType.Pinned);
 
-         do
+         try
          {
-            var output = new byte[outputLength];
-            uint bytesReturned;
-
-            var success = NativeMethods.DeviceIoControlUnknownSize(handle, controlCode, input, inputSize, output, outputLength, out bytesReturned, IntPtr.Zero);
-
-            var lastError = Marshal.GetLastWin32Error();
-            if (!success)
+            do
             {
-               switch ((uint) lastError)
-               {
-                  case Win32Errors.ERROR_MORE_DATA:
-                  case Win32Errors.ERROR_INSUFFICIENT_BUFFER:
-                     outputLength += increment;
-                     break;
+               var output = new byte[outputLength];
+               var outputHandle = GCHandle.Alloc(output, GCHandleType.Pinned);
 
-                  default:
-                     if (lastError != Win32Errors.ERROR_SUCCESS)
-                        NativeError.ThrowException(lastError);
+               try
+               {
+                  uint bytesReturned;
+
+                  var success = NativeMethods.DeviceIoControlUnknownSize(handle, controlCode, inputHandle.AddrOfPinnedObject(), inputSize, outputHandle.AddrOfPinnedObject(), outputLength, out bytesReturned, IntPtr.Zero);
+
+                  var lastError = Marshal.GetLastWin32Error();
+                  if (!success)
+                  {
+                     switch ((uint) lastError)
+                     {
+                        case Win32Errors.ERROR_MORE_DATA:
+                        case Win32Errors.ERROR_INSUFFICIENT_BUFFER:
+                           outputLength += increment;
+                           break;
+
+                        default:
+                           if (lastError != Win32Errors.ERROR_SUCCESS)
+                              NativeError.ThrowException(lastError);
+                           break;
+                     }
+                  }
+
+                  else
                      break;
                }
-            }
+               finally
+               {
+                  outputHandle.Free();
+               }
 
-            else
-               break;
-
-         } while (true);
+            } while (true);
+         }
+         finally
+         {
+            inputHandle.Free();
+         }
       }
 
       #endregion // Private Helpers

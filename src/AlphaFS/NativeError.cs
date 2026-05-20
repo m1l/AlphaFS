@@ -111,7 +111,7 @@ namespace Alphaleonis.Win32
 
 
             case Win32Errors.ERROR_BAD_RECOVERY_POLICY:
-               throw new PolicyException(errorMessage);
+               throw new InvalidOperationException(errorMessage);
 
 
             case Win32Errors.ERROR_FILE_READ_ONLY:
