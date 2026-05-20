@@ -1,4 +1,4 @@
-﻿/*  Copyright (C) 2008-2018 Peter Palotas, Jeffrey Jangli, Alexandr Normuradov
+/*  Copyright (C) 2008-2018 Peter Palotas, Jeffrey Jangli, Alexandr Normuradov
  *  
  *  Permission is hereby granted, free of charge, to any person obtaining a copy 
  *  of this software and associated documentation files (the "Software"), to deal 
@@ -251,17 +251,17 @@ namespace AlphaFS.UnitTest
          // Set DENY for current User.
          if (enable)
          {
-            dirSecurity = dirInfo.GetAccessControl();
+             dirSecurity = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(dirInfo.FullName));
             dirSecurity.AddAccessRule(rule);
-            dirInfo.SetAccessControl(dirSecurity);
+             System.IO.FileSystemAclExtensions.SetAccessControl(new System.IO.DirectoryInfo(dirInfo.FullName), dirSecurity);
          }
 
          // Remove DENY for current User.
          else
          {
-            dirSecurity = dirInfo.GetAccessControl();
+             dirSecurity = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(dirInfo.FullName));
             dirSecurity.RemoveAccessRule(rule);
-            dirInfo.SetAccessControl(dirSecurity);
+             System.IO.FileSystemAclExtensions.SetAccessControl(new System.IO.DirectoryInfo(dirInfo.FullName), dirSecurity);
          }
       }
 

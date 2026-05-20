@@ -60,11 +60,12 @@ namespace AlphaFS.UnitTest
 
             using (new Alphaleonis.Win32.Security.PrivilegeEnabler(Alphaleonis.Win32.Security.Privilege.Security))
             {
-               var s1 = System.IO.Directory.CreateDirectory(pathExpected, expectedDirectorySecurity);
+               var s1 = new System.IO.DirectoryInfo(pathExpected);
+               System.IO.FileSystemAclExtensions.Create(s1, expectedDirectorySecurity);
                var s2 = Alphaleonis.Win32.Filesystem.Directory.CreateDirectory(pathActual, expectedDirectorySecurity);
 
 
-               var expected = s1.GetAccessControl().GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections.All);
+               var expected = System.IO.FileSystemAclExtensions.GetAccessControl(s1).GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections.All);
                var actual = s2.GetAccessControl().GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections.All);
 
 

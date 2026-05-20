@@ -47,10 +47,10 @@ namespace AlphaFS.UnitTest
             
             var foundRules = false;
 
-            var sysIO = System.IO.File.GetAccessControl(folder.FullName);
+            var sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(folder.FullName));
             var sysIOaccessRules = sysIO.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
 
-            var alphaFS = System.IO.File.GetAccessControl(folder.FullName);
+            var alphaFS = Alphaleonis.Win32.Filesystem.Directory.GetAccessControl(folder.FullName);
             var alphaFSaccessRules = alphaFS.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
             
             Console.WriteLine("\n\tSystem.IO rules found: [{0}]\n\tAlphaFS rules found  : [{1}]", sysIOaccessRules.Count, alphaFSaccessRules.Count);

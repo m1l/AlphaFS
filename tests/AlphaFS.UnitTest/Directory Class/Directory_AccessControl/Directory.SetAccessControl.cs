@@ -47,7 +47,7 @@ namespace AlphaFS.UnitTest
          {
             var folder = tempRoot.CreateDirectory();
 
-            var sysIO = System.IO.Directory.GetAccessControl(folder.FullName);
+            var sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(folder.FullName));
             var sysIOaccessRules = sysIO.GetAccessRules(true, true, typeof(NTAccount));
 
             var alphaFS = Alphaleonis.Win32.Filesystem.Directory.GetAccessControl(folder.FullName);
@@ -75,7 +75,7 @@ namespace AlphaFS.UnitTest
             var sysIOdi = new System.IO.DirectoryInfo(folder.FullName);
             var alphaFSdi = new Alphaleonis.Win32.Filesystem.DirectoryInfo(folder.FullName);
 
-            sysIO = sysIOdi.GetAccessControl(AccessControlSections.Access);
+            sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(sysIOdi, AccessControlSections.Access);
             alphaFS = alphaFSdi.GetAccessControl(AccessControlSections.Access);
 
             // Sanity check.
@@ -89,7 +89,7 @@ namespace AlphaFS.UnitTest
 
 
             // Re-read.
-            sysIO = System.IO.Directory.GetAccessControl(folder.FullName, AccessControlSections.Access);
+            sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(folder.FullName), AccessControlSections.Access);
             alphaFS = Alphaleonis.Win32.Filesystem.Directory.GetAccessControl(folder.FullName, AccessControlSections.Access);
 
             // Sanity check.

@@ -50,7 +50,7 @@ namespace AlphaFS.UnitTest
 
             var foundRules = false;
 
-            var sysIO = System.IO.File.GetAccessControl(file.FullName);
+            var sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.FileInfo(file.FullName));
             var sysIOaccessRules = sysIO.GetAccessRules(true, true, typeof(NTAccount));
 
 

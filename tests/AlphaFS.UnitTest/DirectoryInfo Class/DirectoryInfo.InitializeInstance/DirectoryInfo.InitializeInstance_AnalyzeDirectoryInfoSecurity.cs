@@ -49,7 +49,7 @@ namespace AlphaFS.UnitTest
 
             SetSecuritySystem(folder.FullName);
 
-            var dirsec = new System.IO.DirectoryInfo(folder.FullName + @"\inherited").GetAccessControl();
+            var dirsec = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(folder.FullName + @"\inherited"));
 
             var accessRules = dirsec.GetAccessRules(true, true, typeof(System.Security.Principal.SecurityIdentifier));
 
@@ -111,13 +111,13 @@ namespace AlphaFS.UnitTest
 
          var testDirInfo = new System.IO.DirectoryInfo(directory);
 
-         var ds = testDirInfo.GetAccessControl(System.Security.AccessControl.AccessControlSections.Access);
+         var ds = System.IO.FileSystemAclExtensions.GetAccessControl(testDirInfo, System.Security.AccessControl.AccessControlSections.Access);
 
          ds.SetAccessRuleProtection(true, false);
 
          ds.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(new System.Security.Principal.SecurityIdentifier(System.Security.Principal.WellKnownSidType.WorldSid, null), System.Security.AccessControl.FileSystemRights.FullControl, System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit, System.Security.AccessControl.PropagationFlags.None, System.Security.AccessControl.AccessControlType.Allow));
 
-         testDirInfo.SetAccessControl(ds);
+         System.IO.FileSystemAclExtensions.SetAccessControl(testDirInfo, ds);
       }
       
 

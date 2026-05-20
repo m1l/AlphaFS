@@ -55,7 +55,10 @@ namespace AlphaFS.UnitTest
       private void CompareDirectoryInfos(System.IO.DirectoryInfo expected, Alphaleonis.Win32.Filesystem.DirectoryInfo actual, bool exists)
       {
          if (expected == null || actual == null)
-            Assert.AreEqual(expected, actual, "The two DirectoryInfo instances are not the same, but are expected to be.");
+         {
+            Assert.AreEqual(expected == null, actual == null, "The two DirectoryInfo instances are not the same, but are expected to be.");
+            return;
+         }
 
          UnitTestConstants.Dump(expected);
          Console.WriteLine();

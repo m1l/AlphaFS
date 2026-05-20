@@ -59,9 +59,9 @@ namespace AlphaFS.UnitTest
 
 
             // Set DENY for current user.
-            var dirSecurity = dstFolder.GetAccessControl();
+            var dirSecurity = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(dstFolder.FullName));
             dirSecurity.AddAccessRule(rule);
-            dstFolder.SetAccessControl(dirSecurity);
+            System.IO.FileSystemAclExtensions.SetAccessControl(new System.IO.DirectoryInfo(dstFolder.FullName), dirSecurity);
 
 
             try
@@ -71,9 +71,9 @@ namespace AlphaFS.UnitTest
             finally
             {
                // Remove DENY for current user.
-               dirSecurity = dstFolder.GetAccessControl();
+               dirSecurity = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.DirectoryInfo(dstFolder.FullName));
                dirSecurity.RemoveAccessRule(rule);
-               dstFolder.SetAccessControl(dirSecurity);
+               System.IO.FileSystemAclExtensions.SetAccessControl(new System.IO.DirectoryInfo(dstFolder.FullName), dirSecurity);
             }
          }
 

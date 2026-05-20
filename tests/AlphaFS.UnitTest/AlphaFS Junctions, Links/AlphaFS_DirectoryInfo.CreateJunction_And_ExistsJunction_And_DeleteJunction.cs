@@ -78,7 +78,7 @@ namespace AlphaFS.UnitTest
             Assert.IsTrue(dirInfo.EntryInfo.IsMountPoint);
             Assert.IsTrue(dirInfo.EntryInfo.IsReparsePoint);
             Assert.IsFalse(dirInfo.EntryInfo.IsSymbolicLink);
-            Assert.AreEqual(dirInfo.EntryInfo.ReparsePointTag, Alphaleonis.Win32.Filesystem.ReparsePointTag.MountPoint);
+            Assert.AreEqual(Alphaleonis.Win32.Filesystem.ReparsePointTag.MountPoint, dirInfo.EntryInfo.ReparsePointTag);
 
 
 
@@ -112,7 +112,7 @@ namespace AlphaFS.UnitTest
             Assert.IsFalse(dirInfo.EntryInfo.IsMountPoint);
             Assert.IsFalse(dirInfo.EntryInfo.IsReparsePoint);
             Assert.IsFalse(dirInfo.EntryInfo.IsSymbolicLink);
-            Assert.AreNotEqual(dirInfo.EntryInfo.ReparsePointTag, Alphaleonis.Win32.Filesystem.ReparsePointTag.MountPoint);
+            Assert.AreNotEqual(Alphaleonis.Win32.Filesystem.ReparsePointTag.MountPoint, dirInfo.EntryInfo.ReparsePointTag);
 
             #endregion // DeleteJunction
 

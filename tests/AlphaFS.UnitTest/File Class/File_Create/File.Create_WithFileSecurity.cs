@@ -80,10 +80,10 @@ namespace AlphaFS.UnitTest
 
 
                using (new Alphaleonis.Win32.Security.PrivilegeEnabler(Alphaleonis.Win32.Security.Privilege.Security))
-               using (var s1 = System.IO.File.Create(pathExpected, 4096, System.IO.FileOptions.None, expectedFileSecurity))
+               using (var s1 = System.IO.FileSystemAclExtensions.Create(new System.IO.FileInfo(pathExpected), System.IO.FileMode.Create, System.Security.AccessControl.FileSystemRights.FullControl, System.IO.FileShare.None, 4096, System.IO.FileOptions.None, expectedFileSecurity))
                using (var s2 = Alphaleonis.Win32.Filesystem.File.Create(pathActual, 4096, System.IO.FileOptions.None, expectedFileSecurity))
                {
-                  var expected = s1.GetAccessControl().GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections.All);
+                  var expected = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.FileInfo(pathExpected)).GetSecurityDescriptorSddlForm(System.Security.AccessControl.AccessControlSections.All);
 
 
                   // TODO 2018-01-12: BUG FileInfo.GetAccessControl(): System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.

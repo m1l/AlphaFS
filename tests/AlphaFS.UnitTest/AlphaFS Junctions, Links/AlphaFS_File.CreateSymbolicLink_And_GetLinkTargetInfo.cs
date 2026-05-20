@@ -69,7 +69,7 @@ namespace AlphaFS.UnitTest
             Assert.IsFalse(alphaFSFileInfo.EntryInfo.IsMountPoint);
             Assert.IsTrue(alphaFSFileInfo.EntryInfo.IsReparsePoint);
             Assert.IsTrue(alphaFSFileInfo.EntryInfo.IsSymbolicLink);
-            Assert.AreEqual(alphaFSFileInfo.EntryInfo.ReparsePointTag, Alphaleonis.Win32.Filesystem.ReparsePointTag.SymLink);
+            Assert.AreEqual(Alphaleonis.Win32.Filesystem.ReparsePointTag.SymLink, alphaFSFileInfo.EntryInfo.ReparsePointTag);
          }
 
          Console.WriteLine();

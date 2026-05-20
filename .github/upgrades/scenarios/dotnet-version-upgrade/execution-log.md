@@ -23,3 +23,8 @@ Validated the upgraded AlphaFS library tier with full MSBuild checks. The librar
 
 Retargeted the AlphaFS unit test project to net10.0-windows and updated MSTest.TestAdapter and MSTest.TestFramework to version 4.2.3. The first validation build confirmed the project-file migration is in place and surfaced the expected test-source compatibility fixes needed in the next subtasks.
 
+
+## [2026-05-20 15:24] 03.02-test-utility-and-path-fixes
+
+Updated the shared test utilities and the first large batch of path- and behavior-sensitive tests for the net10.0-windows transition. The changes replaced outdated MSTest assertion patterns, moved System.IO ACL operations to FileSystemAclExtensions where required, fixed several helper/test assumptions, and restored a clean build for the retargeted AlphaFS unit test project.
+

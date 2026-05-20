@@ -58,7 +58,10 @@ namespace AlphaFS.UnitTest
       private void CompareFileInfos(System.IO.FileInfo expected, Alphaleonis.Win32.Filesystem.FileInfo actual, bool exists)
       {
          if (expected == null || actual == null)
-            Assert.AreEqual(expected, actual, "The two FileInfo instances are not the same, but are expected to be.");
+         {
+            Assert.AreEqual(expected == null, actual == null, "The two FileInfo instances are not the same, but are expected to be.");
+            return;
+         }
 
          UnitTestConstants.Dump(expected);
          Console.WriteLine();

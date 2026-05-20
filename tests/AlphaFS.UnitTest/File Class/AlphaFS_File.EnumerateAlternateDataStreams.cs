@@ -1,4 +1,4 @@
-﻿/*  Copyright (C) 2008-2018 Peter Palotas, Jeffrey Jangli, Alexandr Normuradov
+/*  Copyright (C) 2008-2018 Peter Palotas, Jeffrey Jangli, Alexandr Normuradov
  *  
  *  Permission is hereby granted, free of charge, to any person obtaining a copy 
  *  of this software and associated documentation files (the "Software"), to deal 
@@ -96,7 +96,7 @@ namespace AlphaFS.UnitTest
             {
                UnitTestConstants.Dump(stream);
 
-               Assert.IsNotNull(stream);
+                Assert.IsFalse(string.IsNullOrWhiteSpace(stream.StreamName) && string.IsNullOrWhiteSpace(stream.FullPath), "Enumerated stream data should include identifying information.");
 
                // The default stream, a file as we know it.
 

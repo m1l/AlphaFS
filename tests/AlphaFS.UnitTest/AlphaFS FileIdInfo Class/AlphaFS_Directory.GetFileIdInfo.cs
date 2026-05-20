@@ -51,7 +51,7 @@ namespace AlphaFS.UnitTest
             Console.WriteLine("\n\tToString(): {0}", fid);
 
 
-            Assert.IsNotNull(fid);
+            Assert.IsFalse(string.IsNullOrWhiteSpace(fid.ToString()), "The file ID info should provide a textual representation.");
          }
 
          Console.WriteLine();

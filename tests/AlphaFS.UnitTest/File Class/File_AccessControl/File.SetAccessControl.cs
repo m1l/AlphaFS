@@ -50,7 +50,7 @@ namespace AlphaFS.UnitTest
             Console.WriteLine("Input File Path: [{0}]", file.FullName);
 
 
-            var sysIO = System.IO.File.GetAccessControl(file.FullName);
+            var sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.FileInfo(file.FullName));
             var sysIOaccessRules = sysIO.GetAccessRules(true, true, typeof(NTAccount));
 
 
@@ -80,7 +80,7 @@ namespace AlphaFS.UnitTest
             var sysIOfi = new System.IO.FileInfo(file.FullName);
             var alphaFSfi = new Alphaleonis.Win32.Filesystem.FileInfo(file.FullName);
 
-            sysIO = sysIOfi.GetAccessControl(AccessControlSections.Access);
+            sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(sysIOfi, AccessControlSections.Access);
             alphaFS = alphaFSfi.GetAccessControl(AccessControlSections.Access);
 
             // Sanity check.
@@ -94,7 +94,7 @@ namespace AlphaFS.UnitTest
 
 
             // Re-read.
-            sysIO = System.IO.File.GetAccessControl(file.FullName, AccessControlSections.Access);
+            sysIO = System.IO.FileSystemAclExtensions.GetAccessControl(new System.IO.FileInfo(file.FullName), AccessControlSections.Access);
             alphaFS = Alphaleonis.Win32.Filesystem.File.GetAccessControl(file.FullName, AccessControlSections.Access);
             
             // Sanity check.
