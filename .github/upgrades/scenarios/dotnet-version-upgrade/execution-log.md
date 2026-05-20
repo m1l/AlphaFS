@@ -33,3 +33,8 @@ Updated the shared test utilities and the first large batch of path- and behavio
 
 Completed the remaining ACL-focused validation for the upgraded AlphaFS test project. The retargeted test project built successfully on net10.0-windows, and a command-line test run completed successfully, confirming the upgraded unit test project is ready for final solution validation.
 
+
+## [2026-05-20 15:43] 03-alphafs-tests
+
+Completed the AlphaFS unit test project upgrade to net10.0-windows. This included retargeting the test project and MSTest packages, modernizing shared test helpers and assertion patterns, updating ACL-related System.IO calls for the modern target, and validating the result with a successful build and test run.
+
