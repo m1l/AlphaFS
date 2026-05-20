@@ -28,3 +28,8 @@ Retargeted the AlphaFS unit test project to net10.0-windows and updated MSTest.T
 
 Updated the shared test utilities and the first large batch of path- and behavior-sensitive tests for the net10.0-windows transition. The changes replaced outdated MSTest assertion patterns, moved System.IO ACL operations to FileSystemAclExtensions where required, fixed several helper/test assumptions, and restored a clean build for the retargeted AlphaFS unit test project.
 
+
+## [2026-05-20 15:42] 03.03-test-acl-and-execution-validation
+
+Completed the remaining ACL-focused validation for the upgraded AlphaFS test project. The retargeted test project built successfully on net10.0-windows, and a command-line test run completed successfully, confirming the upgraded unit test project is ready for final solution validation.
+
