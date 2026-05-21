@@ -46,7 +46,7 @@ namespace Alphaleonis.Win32.Filesystem
             throw new ArgumentNullException("path");
 
          if (!allowEmpty && Utils.IsNullOrWhiteSpace(path))
-            throw new ArgumentException(Resources.Path_Is_Zero_Length_Or_Only_White_Space, "path");
+            throw new ArgumentException(Resources.Path_Is_Zero_Length_Or_Only_White_Space, "path");         
 
          if (options != GetFullPathOptions.None)
             path = ApplyFullPathOptions(path, options);
@@ -57,7 +57,11 @@ namespace Alphaleonis.Win32.Filesystem
 
 
          if (path.StartsWith(LogicalDrivePrefix, StringComparison.Ordinal))
+         {
+            if (path.Length == 4) //  == "\\\\.\\")
+               return path;
             return path.Substring(LogicalDrivePrefix.Length);
+         }
 
 
          if (path.StartsWith(NonInterpretedPathPrefix, StringComparison.Ordinal))
