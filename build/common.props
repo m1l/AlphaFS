@@ -27,7 +27,7 @@
     <LangVersion>7.2</LangVersion>
     
     <Major>2</Major>
-    <Minor>3</Minor>
+    <Minor>4</Minor>
     <Revision>0</Revision>
 
     <BuildNumber Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</BuildNumber>
