@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Transaction_Invalid" xml:space="preserve">
+    <value>Oggetto della transazione non valido.</value>
+  </data>
+  <data name="Transaction_Already_Committed" xml:space="preserve">
+    <value>Transazione già impegnata.</value>
+  </data>
+  <data name="Transaction_Already_Aborted" xml:space="preserve">
+    <value>Transazione già interrotta.</value>
+  </data>
+  <data name="Transactional_Conflict" xml:space="preserve">
+    <value>Conflitto transazionale.</value>
+  </data>
+  <data name="Transaction_Not_Active" xml:space="preserve">
+    <value>Transazione non attiva.</value>
+  </data>
+  <data name="Transaction_Not_Requested" xml:space="preserve">
+    <value>Transazione non richiesta.</value>
+  </data>
+  <data name="Invalid_Transaction_Request" xml:space="preserve">
+    <value>Richiesta di transazione non valida.</value>
+  </data>
+  <data name="HardLinks_Not_Supported" xml:space="preserve">
+    <value>La creazione di collegamenti reali su partizioni non NTFS non è supportata.</value>
+  </data>
+  <data name="No_Stream_Seeking_Support" xml:space="preserve">
+    <value>Questo flusso non supporta la ricerca.</value>
+  </data>
+  <data name="Negative_Count" xml:space="preserve">
+    <value>Il conteggio non può essere negativo.</value>
+  </data>
+  <data name="Negative_Offset" xml:space="preserve">
+    <value>L'offset non può essere negativo.</value>
+  </data>
+  <data name="Buffer_Not_Large_Enough" xml:space="preserve">
+    <value>Il buffer non è abbastanza grande per l'operazione richiesta.</value>
+  </data>
+  <data name="Returned_Invalid_Security_Descriptor" xml:space="preserve">
+    <value>Descrittore di sicurezza non valido restituito dal sistema.</value>
+  </data>
+  <data name="Handle_Is_Invalid" xml:space="preserve">
+    <value>L'handle non è valido.</value>
+  </data>
+  <data name="Handle_Is_Invalid_Win32Error" xml:space="preserve">
+    <value>L'handle non è valido. Errore Win32: [{0}]</value>
+  </data>
+  <data name="UNC_Path_Should_Match_Format" xml:space="preserve">
+    <value>Il percorso della condivisione di rete deve corrispondere al formato: \\server\condivisione</value>
+  </data>
+  <data name="Negative_Lock_Length" xml:space="preserve">
+    <value>La lunghezza del blocco non può essere negativa.</value>
+  </data>
+  <data name="Negative_Destination_Offset" xml:space="preserve">
+    <value>L'offset della destinazione non può essere negativo.</value>
+  </data>
+  <data name="Negative_Length" xml:space="preserve">
+    <value>La lunghezza non può essere negativa.</value>
+  </data>
+  <data name="Source_OffsetAndLength_Outside_Bounds" xml:space="preserve">
+    <value>Offset dell'origine e lunghezza fuori dai limiti dell'array</value>
+  </data>
+  <data name="Privilege_Name_Cannot_Be_Empty" xml:space="preserve">
+    <value>Il nome del privilegio non può essere vuoto.</value>
+  </data>
+  <data name="Cannot_Create_Directory" xml:space="preserve">
+    <value>Impossibile creare la directory.</value>
+  </data>
+  <data name="Target_Directory_Is_A_File" xml:space="preserve">
+    <value>La directory di destinazione è un file, non una directory: [{0}]</value>
+  </data>
+  <data name="Illegal_Characters_In_Path" xml:space="preserve">
+    <value>Caratteri non validi: [{0}] nel percorso.</value>
+  </data>
+  <data name="Path_Is_Zero_Length_Or_Only_White_Space" xml:space="preserve">
+    <value>Path è una stringa di lunghezza zero o contiene solo spazi vuoti.</value>
+  </data>
+  <data name="Unsupported_Path_Format" xml:space="preserve">
+    <value>Il formato del percorso specificato non è supportato: [{0}]</value>
+  </data>
+  <data name="Target_File_Is_A_Directory" xml:space="preserve">
+    <value>Il file di destinazione è una directory, non un file: [{0}]</value>
+  </data>
+  <data name="File_Is_Hidden" xml:space="preserve">
+    <value>Il file specificato è nascosto: [{0}]</value>
+  </data>
+  <data name="Cannot_Determine_Copy_Or_Move" xml:space="preserve">
+    <value>Impossibile determinare l'azione Copia o Sposta.</value>
+  </data>
+  <data name="Invalid_File_Attribute" xml:space="preserve">
+    <value>Il tentativo di impostare un attributo di file non valido non è riuscito.</value>
+  </data>
+  <data name="Read_Incomplete_Header" xml:space="preserve">
+    <value>Lettura intestazione incompleta.</value>
+  </data>
+  <data name="Invalid_Stream_Name" xml:space="preserve">
+    <value>Nome del flusso non valido.</value>
+  </data>
+  <data name="File_Or_Directory_Already_Exists" xml:space="preserve">
+    <value>Il file o la directory esiste già</value>
+  </data>
+  <data name="Destination_Buffer_Not_Large_Enough" xml:space="preserve">
+    <value>Buffer di destinazione non sufficientemente grande per l'operazione richiesta.</value>
+  </data>
+  <data name="Exception_From_Successful_Operation" xml:space="preserve">
+    <value>Funzione implementata in modo errato che tenta di generare un'eccezione da un'operazione riuscita.</value>
+  </data>
+  <data name="Not_A_Valid_Guid" xml:space="preserve">
+    <value>L'argomento non è un GUID del volume valido.</value>
+  </data>
+  <data name="Invalid_Subpath" xml:space="preserve">
+    <value>Sottopercorso non valido</value>
+  </data>
+  <data name="Handle_Is_Closed" xml:space="preserve">
+    <value>La maniglia è chiusa.</value>
+  </data>
+  <data name="Invalid_Reparse_Data" xml:space="preserve">
+    <value>I dati presenti nel buffer del punto di analisi non sono validi</value>
+  </data>
+  <data name="Network_Path_Not_Allowed" xml:space="preserve">
+    <value>Il percorso di rete non è consentito per il collegamento della directory: [{0}]</value>
+  </data>
+  <data name="MoveOptionsDelayUntilReboot_Not_Allowed_With_MoveOptionsCopyAllowed" xml:space="preserve">
+    <value>MoveOptions.CopyAllowed non è consentito quando si utilizza il flag MoveOptions.DelayUntilReboot.</value>
+  </data>
+  <data name="MoveOptionsDelayUntilReboot_Not_Allowed_With_NetworkPath" xml:space="preserve">
+    <value>MoveOptions.DelayUntilReboot non è consentito quando si utilizza un percorso di rete.</value>
+  </data>
+  <data name="Junction_And_Target_Must_Be_On_The_Same_Drive" xml:space="preserve">
+    <value>La directory di destinazione della giunzione di directory deve trovarsi sulla stessa unità locale.</value>
+  </data>
+  <data name="Directory_Is_Not_A_MountPoint" xml:space="preserve">
+    <value>La directory non è un punto di montaggio: [{0}]</value>
+  </data>
+  <data name="InvalidDriveLetterArgument" xml:space="preserve">
+    <value>L'argomento deve essere una lettera di unità: "C", RootDir: "C:\" o un percorso UNC: "\\server\share"</value>
+  </data>
+  <data name="GetFullPathOptions_Add_And_Remove_DirectorySeparator_Invalid" xml:space="preserve">
+    <value>Impossibile aggiungere e rimuovere DirectorySeparator finale contemporaneamente.</value>
+  </data>
+  <data name="No_Drive_Letters_Available" xml:space="preserve">
+    <value>Nessuna lettera di unità disponibile.</value>
+  </data>
+  <data name="GetCurrentWindowsIdentityFailed" xml:space="preserve">
+    <value>Impossibile ottenere l'identità Windows corrente.</value>
+  </data>
+</root>

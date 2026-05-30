@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ko" original="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX">
+    <body>
+      <group id="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Buffer is not large enough for the requested operation.</source>
+          <target state="new">버퍼가 요청한 작업에 비해 충분히 크지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Create_Directory" translate="yes" xml:space="preserve">
+          <source>Cannot create directory.</source>
+          <target state="new">디렉터리를 생성할 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Determine_Copy_Or_Move" translate="yes" xml:space="preserve">
+          <source>Cannot determine Copy or Move action.</source>
+          <target state="new">복사 또는 이동 작업을 결정할 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Destination_Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Destination buffer not large enough for the requested operation.</source>
+          <target state="new">요청한 작업에 비해 대상 버퍼가 충분히 크지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="Directory_Is_Not_A_MountPoint" translate="yes" xml:space="preserve">
+          <source>The directory is not a mount point: [{0}]</source>
+          <target state="new">디렉터리가 마운트 지점이 아닙니다: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Exception_From_Successful_Operation" translate="yes" xml:space="preserve">
+          <source>Incorrectly implemented function attempting to generate exception from successful operation.
+</source>
+          <target state="new">성공적인 작업에서 예외를 생성하려고 시도하는 함수가 잘못 구현되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="File_Is_Hidden" translate="yes" xml:space="preserve">
+          <source>The specified file is hidden: [{0}]</source>
+          <target state="new">지정된 파일이 숨겨져 있습니다: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="File_Or_Directory_Already_Exists" translate="yes" xml:space="preserve">
+          <source>The file or directory already exists</source>
+          <target state="new">파일이나 디렉터리가 이미 존재합니다.</target>
+        </trans-unit>
+        <trans-unit id="GetCurrentWindowsIdentityFailed" translate="yes" xml:space="preserve">
+          <source>Failed to get the current WindowsIdentity.</source>
+          <target state="new">현재 WindowsIdentity를 가져오지 못했습니다.</target>
+        </trans-unit>
+        <trans-unit id="GetFullPathOptions_Add_And_Remove_DirectorySeparator_Invalid" translate="yes" xml:space="preserve">
+          <source>Cannot add and remove trailing DirectorySeparator simultaneously.</source>
+          <target state="new">후행 DirectorySeparator를 동시에 추가하고 제거할 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Closed" translate="yes" xml:space="preserve">
+          <source>The handle is closed.</source>
+          <target state="new">손잡이가 닫혀 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid" translate="yes" xml:space="preserve">
+          <source>The handle is invalid.</source>
+          <target state="new">핸들이 잘못되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid_Win32Error" translate="yes" xml:space="preserve">
+          <source>The handle is invalid. Win32Error: [{0}]</source>
+          <target state="new">핸들이 잘못되었습니다. Win32오류: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="HardLinks_Not_Supported" translate="yes" xml:space="preserve">
+          <source>Creating hard-links on non-NTFS partitions is not supported.</source>
+          <target state="new">NTFS가 아닌 파티션에 하드 링크를 만드는 것은 지원되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="Illegal_Characters_In_Path" translate="yes" xml:space="preserve">
+          <source>Illegal characters: [{0}] in path.</source>
+          <target state="new">잘못된 문자: 경로에 [{0}]가 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="InvalidDriveLetterArgument" translate="yes" xml:space="preserve">
+          <source>Argument must be a drive letter: "C", RootDir: "C:\" or UNC path: "\\server\share"</source>
+          <target state="new">인수는 드라이브 문자여야 합니다: "C", RootDir: "C:\" 또는 UNC 경로: "\\server\share"</target>
+        </trans-unit>
+        <trans-unit id="Invalid_File_Attribute" translate="yes" xml:space="preserve">
+          <source>An attempt to set an invalid file attribute failed.</source>
+          <target state="new">잘못된 파일 속성을 설정하려는 시도가 실패했습니다.</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Reparse_Data" translate="yes" xml:space="preserve">
+          <source>The data present in the reparse point buffer is invalid</source>
+          <target state="new">재분석 지점 버퍼에 있는 데이터가 잘못되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Stream_Name" translate="yes" xml:space="preserve">
+          <source>Invalid stream name.</source>
+          <target state="new">스트림 이름이 잘못되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Subpath" translate="yes" xml:space="preserve">
+          <source>Invalid Subpath</source>
+          <target state="new">잘못된 하위 경로</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Transaction_Request" translate="yes" xml:space="preserve">
+          <source>Invalid transaction request.</source>
+          <target state="new">잘못된 거래 요청입니다.</target>
+        </trans-unit>
+        <trans-unit id="Junction_And_Target_Must_Be_On_The_Same_Drive" translate="yes" xml:space="preserve">
+          <source>The target directory of the directory junction must be on the same local drive.</source>
+          <target state="new">디렉터리 접합의 대상 디렉터리는 동일한 로컬 드라이브에 있어야 합니다.</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_MoveOptionsCopyAllowed" translate="yes" xml:space="preserve">
+          <source>MoveOptions.CopyAllowed is not allowed when using the MoveOptions.DelayUntilReboot flag.</source>
+          <target state="new">MoveOptions.DelayUntilReboot 플래그를 사용하는 경우 MoveOptions.CopyAllowed가 허용되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_NetworkPath" translate="yes" xml:space="preserve">
+          <source>MoveOptions.DelayUntilReboot is not allowed when using a network path.</source>
+          <target state="new">네트워크 경로를 사용하는 경우 MoveOptions.DelayUntilReboot가 허용되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Count" translate="yes" xml:space="preserve">
+          <source>Count cannot be negative.</source>
+          <target state="new">개수는 음수일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Destination_Offset" translate="yes" xml:space="preserve">
+          <source>Destination offset cannot be negative.</source>
+          <target state="new">대상 오프셋은 음수일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Length" translate="yes" xml:space="preserve">
+          <source>Length cannot be negative.</source>
+          <target state="new">길이는 음수일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Lock_Length" translate="yes" xml:space="preserve">
+          <source>Lock length cannot be negative.</source>
+          <target state="new">잠금 길이는 음수일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Offset" translate="yes" xml:space="preserve">
+          <source>Offset cannot be negative.</source>
+          <target state="new">오프셋은 음수일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Network_Path_Not_Allowed" translate="yes" xml:space="preserve">
+          <source>Network path is not allowed for directory junction: [{0}]</source>
+          <target state="new">디렉터리 접합: [{0}]에는 네트워크 경로가 허용되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="No_Drive_Letters_Available" translate="yes" xml:space="preserve">
+          <source>No drive letters available.</source>
+          <target state="new">사용할 수 있는 드라이브 문자가 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="No_Stream_Seeking_Support" translate="yes" xml:space="preserve">
+          <source>This stream does not support seeking.</source>
+          <target state="new">이 스트림은 검색을 지원하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="Not_A_Valid_Guid" translate="yes" xml:space="preserve">
+          <source>Argument is not a valid Volume GUID.</source>
+          <target state="new">인수가 유효한 볼륨 GUID가 아닙니다.</target>
+        </trans-unit>
+        <trans-unit id="Path_Is_Zero_Length_Or_Only_White_Space" translate="yes" xml:space="preserve">
+          <source>Path is a zero-length string or contains only white space.</source>
+          <target state="new">Path는 길이가 0인 문자열이거나 공백만 포함합니다.</target>
+        </trans-unit>
+        <trans-unit id="Privilege_Name_Cannot_Be_Empty" translate="yes" xml:space="preserve">
+          <source>Privilege name cannot be empty.</source>
+          <target state="new">권한 이름은 비워둘 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="Read_Incomplete_Header" translate="yes" xml:space="preserve">
+          <source>Incomplete header read.</source>
+          <target state="new">헤더 읽기가 불완전합니다.</target>
+        </trans-unit>
+        <trans-unit id="Returned_Invalid_Security_Descriptor" translate="yes" xml:space="preserve">
+          <source>Invalid security descriptor returned from system.</source>
+          <target state="new">시스템에서 잘못된 보안 설명자가 반환되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Source_OffsetAndLength_Outside_Bounds" translate="yes" xml:space="preserve">
+          <source>Source offset and length outside the bounds of the array</source>
+          <target state="new">배열 경계를 벗어난 소스 오프셋 및 길이</target>
+        </trans-unit>
+        <trans-unit id="Target_Directory_Is_A_File" translate="yes" xml:space="preserve">
+          <source>The target directory is a file, not a directory: [{0}]</source>
+          <target state="new">대상 디렉터리는 디렉터리가 아닌 파일입니다: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Target_File_Is_A_Directory" translate="yes" xml:space="preserve">
+          <source>The target file is a directory, not a file: [{0}]</source>
+          <target state="new">대상 파일은 파일이 아닌 디렉터리입니다: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Aborted" translate="yes" xml:space="preserve">
+          <source>Transaction already aborted.</source>
+          <target state="new">거래가 이미 중단되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Committed" translate="yes" xml:space="preserve">
+          <source>Transaction already committed.</source>
+          <target state="new">트랜잭션이 이미 커밋되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Invalid" translate="yes" xml:space="preserve">
+          <source>Invalid transaction object.</source>
+          <target state="new">잘못된 거래 개체입니다.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Active" translate="yes" xml:space="preserve">
+          <source>Transaction not active.</source>
+          <target state="new">거래가 활성화되지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Requested" translate="yes" xml:space="preserve">
+          <source>Transaction not requested.</source>
+          <target state="new">거래가 요청되지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="Transactional_Conflict" translate="yes" xml:space="preserve">
+          <source>Transactional conflict.</source>
+          <target state="new">거래 충돌.</target>
+        </trans-unit>
+        <trans-unit id="UNC_Path_Should_Match_Format" translate="yes" xml:space="preserve">
+          <source>Network share path should match the format: \\server\share</source>
+          <target state="new">네트워크 공유 경로는 \\server\share 형식과 일치해야 합니다.</target>
+        </trans-unit>
+        <trans-unit id="Unsupported_Path_Format" translate="yes" xml:space="preserve">
+          <source>The given path's format is not supported: [{0}]</source>
+          <target state="new">해당 경로의 형식은 지원되지 않습니다: [{0}]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

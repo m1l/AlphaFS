@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="es" original="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX">
+    <body>
+      <group id="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Buffer is not large enough for the requested operation.</source>
+          <target state="new">El búfer no es lo suficientemente grande para la operación solicitada.</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Create_Directory" translate="yes" xml:space="preserve">
+          <source>Cannot create directory.</source>
+          <target state="new">No se puede crear el directorio.</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Determine_Copy_Or_Move" translate="yes" xml:space="preserve">
+          <source>Cannot determine Copy or Move action.</source>
+          <target state="new">No se puede determinar la acción Copiar o Mover.</target>
+        </trans-unit>
+        <trans-unit id="Destination_Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Destination buffer not large enough for the requested operation.</source>
+          <target state="new">El búfer de destino no es lo suficientemente grande para la operación solicitada.</target>
+        </trans-unit>
+        <trans-unit id="Directory_Is_Not_A_MountPoint" translate="yes" xml:space="preserve">
+          <source>The directory is not a mount point: [{0}]</source>
+          <target state="new">El directorio no es un punto de montaje: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Exception_From_Successful_Operation" translate="yes" xml:space="preserve">
+          <source>Incorrectly implemented function attempting to generate exception from successful operation.
+</source>
+          <target state="new">Función implementada incorrectamente que intenta generar una excepción a partir de una operación exitosa.</target>
+        </trans-unit>
+        <trans-unit id="File_Is_Hidden" translate="yes" xml:space="preserve">
+          <source>The specified file is hidden: [{0}]</source>
+          <target state="new">El archivo especificado está oculto: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="File_Or_Directory_Already_Exists" translate="yes" xml:space="preserve">
+          <source>The file or directory already exists</source>
+          <target state="new">El archivo o directorio ya existe</target>
+        </trans-unit>
+        <trans-unit id="GetCurrentWindowsIdentityFailed" translate="yes" xml:space="preserve">
+          <source>Failed to get the current WindowsIdentity.</source>
+          <target state="new">No se pudo obtener la identidad de Windows actual.</target>
+        </trans-unit>
+        <trans-unit id="GetFullPathOptions_Add_And_Remove_DirectorySeparator_Invalid" translate="yes" xml:space="preserve">
+          <source>Cannot add and remove trailing DirectorySeparator simultaneously.</source>
+          <target state="new">No se pueden agregar ni eliminar DirectorySeparator final simultáneamente.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Closed" translate="yes" xml:space="preserve">
+          <source>The handle is closed.</source>
+          <target state="new">La manija está cerrada.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid" translate="yes" xml:space="preserve">
+          <source>The handle is invalid.</source>
+          <target state="new">El identificador no es válido.</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid_Win32Error" translate="yes" xml:space="preserve">
+          <source>The handle is invalid. Win32Error: [{0}]</source>
+          <target state="new">El identificador no es válido. Error Win32: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="HardLinks_Not_Supported" translate="yes" xml:space="preserve">
+          <source>Creating hard-links on non-NTFS partitions is not supported.</source>
+          <target state="new">No se admite la creación de vínculos físicos en particiones que no sean NTFS.</target>
+        </trans-unit>
+        <trans-unit id="Illegal_Characters_In_Path" translate="yes" xml:space="preserve">
+          <source>Illegal characters: [{0}] in path.</source>
+          <target state="new">Caracteres ilegales: [{0}] en la ruta.</target>
+        </trans-unit>
+        <trans-unit id="InvalidDriveLetterArgument" translate="yes" xml:space="preserve">
+          <source>Argument must be a drive letter: "C", RootDir: "C:\" or UNC path: "\\server\share"</source>
+          <target state="new">El argumento debe ser una letra de unidad: "C", RootDir: "C:\" o ruta UNC: "\\server\share"</target>
+        </trans-unit>
+        <trans-unit id="Invalid_File_Attribute" translate="yes" xml:space="preserve">
+          <source>An attempt to set an invalid file attribute failed.</source>
+          <target state="new">Error al intentar establecer un atributo de archivo no válido.</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Reparse_Data" translate="yes" xml:space="preserve">
+          <source>The data present in the reparse point buffer is invalid</source>
+          <target state="new">Los datos presentes en el búfer del punto de análisis no son válidos</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Stream_Name" translate="yes" xml:space="preserve">
+          <source>Invalid stream name.</source>
+          <target state="new">Nombre de transmisión no válido.</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Subpath" translate="yes" xml:space="preserve">
+          <source>Invalid Subpath</source>
+          <target state="new">Subruta no válida</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Transaction_Request" translate="yes" xml:space="preserve">
+          <source>Invalid transaction request.</source>
+          <target state="new">Solicitud de transacción no válida.</target>
+        </trans-unit>
+        <trans-unit id="Junction_And_Target_Must_Be_On_The_Same_Drive" translate="yes" xml:space="preserve">
+          <source>The target directory of the directory junction must be on the same local drive.</source>
+          <target state="new">El directorio de destino de la unión de directorios debe estar en la misma unidad local.</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_MoveOptionsCopyAllowed" translate="yes" xml:space="preserve">
+          <source>MoveOptions.CopyAllowed is not allowed when using the MoveOptions.DelayUntilReboot flag.</source>
+          <target state="new">MoveOptions.CopyAllowed no está permitido cuando se utiliza el indicador MoveOptions.DelayUntilReboot.</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_NetworkPath" translate="yes" xml:space="preserve">
+          <source>MoveOptions.DelayUntilReboot is not allowed when using a network path.</source>
+          <target state="new">MoveOptions.DelayUntilReboot no está permitido cuando se utiliza una ruta de red.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Count" translate="yes" xml:space="preserve">
+          <source>Count cannot be negative.</source>
+          <target state="new">El recuento no puede ser negativo.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Destination_Offset" translate="yes" xml:space="preserve">
+          <source>Destination offset cannot be negative.</source>
+          <target state="new">El desplazamiento de destino no puede ser negativo.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Length" translate="yes" xml:space="preserve">
+          <source>Length cannot be negative.</source>
+          <target state="new">La longitud no puede ser negativa.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Lock_Length" translate="yes" xml:space="preserve">
+          <source>Lock length cannot be negative.</source>
+          <target state="new">La longitud del bloqueo no puede ser negativa.</target>
+        </trans-unit>
+        <trans-unit id="Negative_Offset" translate="yes" xml:space="preserve">
+          <source>Offset cannot be negative.</source>
+          <target state="new">La compensación no puede ser negativa.</target>
+        </trans-unit>
+        <trans-unit id="Network_Path_Not_Allowed" translate="yes" xml:space="preserve">
+          <source>Network path is not allowed for directory junction: [{0}]</source>
+          <target state="new">La ruta de red no está permitida para la unión de directorios: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="No_Drive_Letters_Available" translate="yes" xml:space="preserve">
+          <source>No drive letters available.</source>
+          <target state="new">No hay letras de unidad disponibles.</target>
+        </trans-unit>
+        <trans-unit id="No_Stream_Seeking_Support" translate="yes" xml:space="preserve">
+          <source>This stream does not support seeking.</source>
+          <target state="new">Esta transmisión no admite la búsqueda.</target>
+        </trans-unit>
+        <trans-unit id="Not_A_Valid_Guid" translate="yes" xml:space="preserve">
+          <source>Argument is not a valid Volume GUID.</source>
+          <target state="new">El argumento no es un GUID de volumen válido.</target>
+        </trans-unit>
+        <trans-unit id="Path_Is_Zero_Length_Or_Only_White_Space" translate="yes" xml:space="preserve">
+          <source>Path is a zero-length string or contains only white space.</source>
+          <target state="new">La ruta es una cadena de longitud cero o contiene solo espacios en blanco.</target>
+        </trans-unit>
+        <trans-unit id="Privilege_Name_Cannot_Be_Empty" translate="yes" xml:space="preserve">
+          <source>Privilege name cannot be empty.</source>
+          <target state="new">El nombre del privilegio no puede estar vacío.</target>
+        </trans-unit>
+        <trans-unit id="Read_Incomplete_Header" translate="yes" xml:space="preserve">
+          <source>Incomplete header read.</source>
+          <target state="new">Lectura de encabezado incompleta.</target>
+        </trans-unit>
+        <trans-unit id="Returned_Invalid_Security_Descriptor" translate="yes" xml:space="preserve">
+          <source>Invalid security descriptor returned from system.</source>
+          <target state="new">Descriptor de seguridad no válido devuelto por el sistema.</target>
+        </trans-unit>
+        <trans-unit id="Source_OffsetAndLength_Outside_Bounds" translate="yes" xml:space="preserve">
+          <source>Source offset and length outside the bounds of the array</source>
+          <target state="new">Desplazamiento de origen y longitud fuera de los límites de la matriz</target>
+        </trans-unit>
+        <trans-unit id="Target_Directory_Is_A_File" translate="yes" xml:space="preserve">
+          <source>The target directory is a file, not a directory: [{0}]</source>
+          <target state="new">El directorio de destino es un archivo, no un directorio: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Target_File_Is_A_Directory" translate="yes" xml:space="preserve">
+          <source>The target file is a directory, not a file: [{0}]</source>
+          <target state="new">El archivo de destino es un directorio, no un archivo: [{0}]</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Aborted" translate="yes" xml:space="preserve">
+          <source>Transaction already aborted.</source>
+          <target state="new">La transacción ya ha sido abortada.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Committed" translate="yes" xml:space="preserve">
+          <source>Transaction already committed.</source>
+          <target state="new">Transacción ya comprometida.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Invalid" translate="yes" xml:space="preserve">
+          <source>Invalid transaction object.</source>
+          <target state="new">Objeto de transacción no válido.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Active" translate="yes" xml:space="preserve">
+          <source>Transaction not active.</source>
+          <target state="new">Transacción no activa.</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Requested" translate="yes" xml:space="preserve">
+          <source>Transaction not requested.</source>
+          <target state="new">Transacción no solicitada.</target>
+        </trans-unit>
+        <trans-unit id="Transactional_Conflict" translate="yes" xml:space="preserve">
+          <source>Transactional conflict.</source>
+          <target state="new">Conflicto transaccional.</target>
+        </trans-unit>
+        <trans-unit id="UNC_Path_Should_Match_Format" translate="yes" xml:space="preserve">
+          <source>Network share path should match the format: \\server\share</source>
+          <target state="new">La ruta del recurso compartido de red debe coincidir con el formato: \\server\share</target>
+        </trans-unit>
+        <trans-unit id="Unsupported_Path_Format" translate="yes" xml:space="preserve">
+          <source>The given path's format is not supported: [{0}]</source>
+          <target state="new">El formato de la ruta proporcionada no es compatible: [{0}]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="zh-Hant" original="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX">
+    <body>
+      <group id="../ALPHAFS/SRC/ALPHAFS/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Buffer is not large enough for the requested operation.</source>
+          <target state="new">緩衝區對於請求的操作來說不夠大。</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Create_Directory" translate="yes" xml:space="preserve">
+          <source>Cannot create directory.</source>
+          <target state="new">無法建立目錄。</target>
+        </trans-unit>
+        <trans-unit id="Cannot_Determine_Copy_Or_Move" translate="yes" xml:space="preserve">
+          <source>Cannot determine Copy or Move action.</source>
+          <target state="new">無法確定複製或移動操作。</target>
+        </trans-unit>
+        <trans-unit id="Destination_Buffer_Not_Large_Enough" translate="yes" xml:space="preserve">
+          <source>Destination buffer not large enough for the requested operation.</source>
+          <target state="new">目標緩衝區對於請求的操作來說不夠大。</target>
+        </trans-unit>
+        <trans-unit id="Directory_Is_Not_A_MountPoint" translate="yes" xml:space="preserve">
+          <source>The directory is not a mount point: [{0}]</source>
+          <target state="new">該目錄不是裝載點：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="Exception_From_Successful_Operation" translate="yes" xml:space="preserve">
+          <source>Incorrectly implemented function attempting to generate exception from successful operation.
+</source>
+          <target state="new">錯誤實現的函數試圖從成功的操作中產生異常。</target>
+        </trans-unit>
+        <trans-unit id="File_Is_Hidden" translate="yes" xml:space="preserve">
+          <source>The specified file is hidden: [{0}]</source>
+          <target state="new">指定的檔案已隱藏：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="File_Or_Directory_Already_Exists" translate="yes" xml:space="preserve">
+          <source>The file or directory already exists</source>
+          <target state="new">檔案或目錄已存在</target>
+        </trans-unit>
+        <trans-unit id="GetCurrentWindowsIdentityFailed" translate="yes" xml:space="preserve">
+          <source>Failed to get the current WindowsIdentity.</source>
+          <target state="new">無法取得目前的 WindowsIdentity。</target>
+        </trans-unit>
+        <trans-unit id="GetFullPathOptions_Add_And_Remove_DirectorySeparator_Invalid" translate="yes" xml:space="preserve">
+          <source>Cannot add and remove trailing DirectorySeparator simultaneously.</source>
+          <target state="new">無法同時新增和刪除尾隨 DirectorySeparator。</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Closed" translate="yes" xml:space="preserve">
+          <source>The handle is closed.</source>
+          <target state="new">手柄已關閉。</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid" translate="yes" xml:space="preserve">
+          <source>The handle is invalid.</source>
+          <target state="new">句柄無效。</target>
+        </trans-unit>
+        <trans-unit id="Handle_Is_Invalid_Win32Error" translate="yes" xml:space="preserve">
+          <source>The handle is invalid. Win32Error: [{0}]</source>
+          <target state="new">句柄無效。 Win32錯誤：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="HardLinks_Not_Supported" translate="yes" xml:space="preserve">
+          <source>Creating hard-links on non-NTFS partitions is not supported.</source>
+          <target state="new">不支援在非 NTFS 分割區上建立硬連結。</target>
+        </trans-unit>
+        <trans-unit id="Illegal_Characters_In_Path" translate="yes" xml:space="preserve">
+          <source>Illegal characters: [{0}] in path.</source>
+          <target state="new">路徑中存在非法字元：[{0}]。</target>
+        </trans-unit>
+        <trans-unit id="InvalidDriveLetterArgument" translate="yes" xml:space="preserve">
+          <source>Argument must be a drive letter: "C", RootDir: "C:\" or UNC path: "\\server\share"</source>
+          <target state="new">參數必須是磁碟機號碼：“C”、RootDir：“C:\”或 UNC 路徑：“\\server\share”</target>
+        </trans-unit>
+        <trans-unit id="Invalid_File_Attribute" translate="yes" xml:space="preserve">
+          <source>An attempt to set an invalid file attribute failed.</source>
+          <target state="new">嘗試設定無效的檔案屬性失敗。</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Reparse_Data" translate="yes" xml:space="preserve">
+          <source>The data present in the reparse point buffer is invalid</source>
+          <target state="new">重分析點緩衝區中存在的資料無效</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Stream_Name" translate="yes" xml:space="preserve">
+          <source>Invalid stream name.</source>
+          <target state="new">流名稱無效。</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Subpath" translate="yes" xml:space="preserve">
+          <source>Invalid Subpath</source>
+          <target state="new">無效的子路徑</target>
+        </trans-unit>
+        <trans-unit id="Invalid_Transaction_Request" translate="yes" xml:space="preserve">
+          <source>Invalid transaction request.</source>
+          <target state="new">無效的交易請求。</target>
+        </trans-unit>
+        <trans-unit id="Junction_And_Target_Must_Be_On_The_Same_Drive" translate="yes" xml:space="preserve">
+          <source>The target directory of the directory junction must be on the same local drive.</source>
+          <target state="new">目錄連線的目標目錄必須位於相同本機磁碟機上。</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_MoveOptionsCopyAllowed" translate="yes" xml:space="preserve">
+          <source>MoveOptions.CopyAllowed is not allowed when using the MoveOptions.DelayUntilReboot flag.</source>
+          <target state="new">使用 MoveOptions.DelayUntilReboot 標誌時不允許 MoveOptions.CopyAllowed。</target>
+        </trans-unit>
+        <trans-unit id="MoveOptionsDelayUntilReboot_Not_Allowed_With_NetworkPath" translate="yes" xml:space="preserve">
+          <source>MoveOptions.DelayUntilReboot is not allowed when using a network path.</source>
+          <target state="new">使用網路路徑時不允許 MoveOptions.DelayUntilReboot。</target>
+        </trans-unit>
+        <trans-unit id="Negative_Count" translate="yes" xml:space="preserve">
+          <source>Count cannot be negative.</source>
+          <target state="new">計數不能為負數。</target>
+        </trans-unit>
+        <trans-unit id="Negative_Destination_Offset" translate="yes" xml:space="preserve">
+          <source>Destination offset cannot be negative.</source>
+          <target state="new">目標偏移量不能為負數。</target>
+        </trans-unit>
+        <trans-unit id="Negative_Length" translate="yes" xml:space="preserve">
+          <source>Length cannot be negative.</source>
+          <target state="new">長度不能為負數。</target>
+        </trans-unit>
+        <trans-unit id="Negative_Lock_Length" translate="yes" xml:space="preserve">
+          <source>Lock length cannot be negative.</source>
+          <target state="new">鎖長度不能為負數。</target>
+        </trans-unit>
+        <trans-unit id="Negative_Offset" translate="yes" xml:space="preserve">
+          <source>Offset cannot be negative.</source>
+          <target state="new">偏移量不能為負數。</target>
+        </trans-unit>
+        <trans-unit id="Network_Path_Not_Allowed" translate="yes" xml:space="preserve">
+          <source>Network path is not allowed for directory junction: [{0}]</source>
+          <target state="new">目錄連線不允許使用網路路徑：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="No_Drive_Letters_Available" translate="yes" xml:space="preserve">
+          <source>No drive letters available.</source>
+          <target state="new">沒有可用的磁碟機號。</target>
+        </trans-unit>
+        <trans-unit id="No_Stream_Seeking_Support" translate="yes" xml:space="preserve">
+          <source>This stream does not support seeking.</source>
+          <target state="new">該流不支援查找。</target>
+        </trans-unit>
+        <trans-unit id="Not_A_Valid_Guid" translate="yes" xml:space="preserve">
+          <source>Argument is not a valid Volume GUID.</source>
+          <target state="new">參數不是有效的磁碟區 GUID。</target>
+        </trans-unit>
+        <trans-unit id="Path_Is_Zero_Length_Or_Only_White_Space" translate="yes" xml:space="preserve">
+          <source>Path is a zero-length string or contains only white space.</source>
+          <target state="new">路徑是零長度字串或僅包含空格。</target>
+        </trans-unit>
+        <trans-unit id="Privilege_Name_Cannot_Be_Empty" translate="yes" xml:space="preserve">
+          <source>Privilege name cannot be empty.</source>
+          <target state="new">權限名稱不能為空。</target>
+        </trans-unit>
+        <trans-unit id="Read_Incomplete_Header" translate="yes" xml:space="preserve">
+          <source>Incomplete header read.</source>
+          <target state="new">標題讀取不完整。</target>
+        </trans-unit>
+        <trans-unit id="Returned_Invalid_Security_Descriptor" translate="yes" xml:space="preserve">
+          <source>Invalid security descriptor returned from system.</source>
+          <target state="new">從系統傳回的安全描述符無效。</target>
+        </trans-unit>
+        <trans-unit id="Source_OffsetAndLength_Outside_Bounds" translate="yes" xml:space="preserve">
+          <source>Source offset and length outside the bounds of the array</source>
+          <target state="new">來源偏移量和長度超出數組範圍</target>
+        </trans-unit>
+        <trans-unit id="Target_Directory_Is_A_File" translate="yes" xml:space="preserve">
+          <source>The target directory is a file, not a directory: [{0}]</source>
+          <target state="new">目標目錄是文件，不是目錄：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="Target_File_Is_A_Directory" translate="yes" xml:space="preserve">
+          <source>The target file is a directory, not a file: [{0}]</source>
+          <target state="new">目標檔案是目錄，不是檔案：[{0}]</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Aborted" translate="yes" xml:space="preserve">
+          <source>Transaction already aborted.</source>
+          <target state="new">交易已中止。</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Already_Committed" translate="yes" xml:space="preserve">
+          <source>Transaction already committed.</source>
+          <target state="new">交易已提交。</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Invalid" translate="yes" xml:space="preserve">
+          <source>Invalid transaction object.</source>
+          <target state="new">交易對象無效。</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Active" translate="yes" xml:space="preserve">
+          <source>Transaction not active.</source>
+          <target state="new">交易不活躍。</target>
+        </trans-unit>
+        <trans-unit id="Transaction_Not_Requested" translate="yes" xml:space="preserve">
+          <source>Transaction not requested.</source>
+          <target state="new">未請求交易。</target>
+        </trans-unit>
+        <trans-unit id="Transactional_Conflict" translate="yes" xml:space="preserve">
+          <source>Transactional conflict.</source>
+          <target state="new">交易衝突。</target>
+        </trans-unit>
+        <trans-unit id="UNC_Path_Should_Match_Format" translate="yes" xml:space="preserve">
+          <source>Network share path should match the format: \\server\share</source>
+          <target state="new">網路共用路徑應符合格式：\\server\share</target>
+        </trans-unit>
+        <trans-unit id="Unsupported_Path_Format" translate="yes" xml:space="preserve">
+          <source>The given path's format is not supported: [{0}]</source>
+          <target state="new">不支援給定路徑的格式：[{0}]</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
